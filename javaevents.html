@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    
+<h1>Javascript events </h1>
+
+<a href="https://www.google.no/">Link to google</a>
+<p></p>
+<button>Dont press me</button>
+
+<script>
+
+ var btn = document.querySelector("button"); 
+
+/* function ouch (){
+    alert("ouch! i told you not to press me")
+} */
+
+// En måte å få alert på
+/* btn.onclick = ouch ; */
+
+// En annen måte å få alert
+/* btn.addEventListener("click", ouch ); */
+
+// Enda en måte å få alert med farge på kanppen
+  btn.addEventListener ("click", function(event){
+    alert ("Ouch dont press me!!")
+event.target.style.backgroundColor = "orange";
+})  
+
+// Forhindre det som egentlig skal skje
+var link = document.querySelector ("a")
+link.addEventListener ("click", function (){
+    event.preventDefault ();
+    alert("Sorry no google for you nerd");
+})
+
+
+
+</script>
+
+
+</body>
+</html>
